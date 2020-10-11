@@ -1,11 +1,11 @@
-package sec02.exam06_boolean;
+package capter02.sec02.exam06_boolean;
 public class BooleanExample {
 	public static void main(String[] args) {
 		boolean stop = true;
 		if(stop) {
-			System.out.println("ÁßÁöÇÕ´Ï´Ù.");
+			System.out.println("ì¤‘ì§€í•©ë‹ˆë‹¤.");
 		} else {
-			System.out.println("½ÃÀÛÇÕ´Ï´Ù.");
+			System.out.println("ì‹œìž‘í•©ë‹ˆë‹¤.");
 		}
 	} 
 }

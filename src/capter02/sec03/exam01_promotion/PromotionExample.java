@@ -1,13 +1,13 @@
-package sec03.exam01_promotion;
+package capter02.sec03.exam01_promotion;
 public class PromotionExample {
 	public static void main(String[] args) {	
 		byte byteValue = 10;
-		int intValue = byteValue;
+		int intValue = byteValue; 
 		System.out.println(intValue);
 
-		char charValue = '°¡';
+		char charValue = 'ê°€';
 		intValue = charValue;
-		System.out.println("°¡ÀÇ À¯´ÏÄÚµå=" + intValue);
+		System.out.println("ê°€ì˜ ìœ ë‹ˆì½”ë“œ=" + intValue);
 		
 		intValue = 500;
 		long longValue = intValue;;
@@ -15,6 +15,6 @@ public class PromotionExample {
 		
 		intValue = 200;
 		double doubleValue = intValue;
-		System.out.println(doubleValue);		
+		System.out.println(doubleValue);	
 	} 
 }

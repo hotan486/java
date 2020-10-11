@@ -1,4 +1,4 @@
-package sec03.exam03_accuracy;
+package capter02.sec03.exam03_accuracy;
 public class FromIntToFloat {
 	public static void main(String[] args) {
 		int num1 = 123456780;

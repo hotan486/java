@@ -1,11 +1,11 @@
-package sec03.exam02_casting;
+package capter02.sec03.exam02_casting;
 public class CheckValueBeforeCasting {
   public static void main(String[] args) {
 	  int i = 128;
 	  
 	  if( (i<Byte.MIN_VALUE) || (i>Byte.MAX_VALUE) ) {
-		  System.out.println("byte Å¸ÀÔÀ¸·Î º¯È¯ÇÒ ¼ö ¾ø½À´Ï´Ù.");
-		  System.out.println("°ªÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ¼¼¿ä");
+		  System.out.println("byte íƒ€ì…ìœ¼ë¡œ ë³€í™˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+		  System.out.println("ê°’ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì„¸ìš”");
 	  } else {
 		  byte b = (byte) i;
 		  System.out.println(b);

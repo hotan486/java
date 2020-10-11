@@ -226,7 +226,195 @@ http://www.unicode.org
 		System.out.println(var2);
 		System.out.println(var4);
 
-      10
+        10
         20
         1000000000000
 ```
+
+### 2.2.3 실수 타입 
+
+        실수 리터럴 기본 타입이 double 이므로 
+        float 저장시 f를 붙인다.
+
+
+```java
+		//실수값 저장
+		double var1 = 3.14;		
+		//float var2 = 3.14;		//컴파일 에러(Type mismatch)
+		float var3 = 3.14F;
+		
+		//정밀도 테스트
+		double var4 = 0.1234567890123456789;
+		float var5 = 0.1234567890123456789F;
+		
+		System.out.println("var1: " + var1);
+		System.out.println("var2: " + var3);
+		System.out.println("var4: " + var4);
+		System.out.println("var5: " + var5);
+		
+		//e 사용하기
+		int var6 = 3000000;
+		double var7 = 3e6; // 0이 6개
+		float var8 = 3e6F; 
+		double var9 = 2e-3; // 0.002
+		System.out.println("var6: " + var6);
+		System.out.println("var7: " + var7);
+		System.out.println("var8: " + var8);
+		System.out.println("var9: " + var9);
+
+        var1: 3.14
+        var2: 3.14
+        var4: 0.12345678901234568
+        var5: 0.12345679
+        var6: 3000000
+        var7: 3000000.0
+        var8: 3000000.0
+        var9: 0.002
+```
+
+### 2.2.4 논리 타입
+
+```java
+		boolean stop = true;
+		if(stop) {
+			System.out.println("중지합니다.");
+		} else {
+			System.out.println("시작합니다.");
+        }
+        
+        중지합니다.
+```
+
+## 2.3 타입 변환
+
+### 2.3.1 자동 타입 변환 
+
+        큰 변수에 작은 변수 타입을 저장시 발생 
+
+```java
+    byte byteValue = 10;
+    int intValue = byteValue;
+    System.out.println(intValue);
+
+    char charValue = '가';
+    intValue = charValue;
+    System.out.println("가의 유니코드=" + intValue);
+    
+    intValue = 500;
+    long longValue = intValue;;
+    System.out.println(longValue);		
+    
+    intValue = 200;
+    double doubleValue = intValue;
+    System.out.println(doubleValue);	
+    
+    
+    10
+    가의 유니코드=44032
+    500
+    200.0
+		
+```
+
+### 2.3.1 강제 타입 변환 
+        
+    작은 변수에 큰 변수 타입을 저장시 발생 
+    크기에 따라 넘어가는 데이터는 짤림 
+
+```java
+int intValue = 44032;
+char charValue = (char) intValue;
+System.out.println(charValue);
+
+long longValue = 500;
+intValue = (int) longValue;
+System.out.println(intValue);
+
+double doubleValue = 3.14;
+intValue = (int) doubleValue;
+System.out.println(intValue);	
+
+가
+500
+3
+```
+
+```java
+int i = 128;
+	  
+if( (i<Byte.MIN_VALUE) || (i>Byte.MAX_VALUE) ) {
+    System.out.println("byte 타입으로 변환할 수 없습니다.");
+    System.out.println("값을 다시 확인해 주세요");
+} else {
+    byte b = (byte) i;
+    System.out.println(b);
+}
+
+byte 타입으로 변환할 수 없습니다.
+값을 다시 확인해 주세요
+```
+
+ ```java
+int num1 = 123456780;
+int num2 = 123456780;
+
+float num3 = num2;
+num2 = (int) num3;
+
+int result = num1 - num2;
+System.out.println(result);
+
+-4
+```
+
+ ```java
+int num1 = 123456780;
+int num2 = 123456780;
+
+double num3 = num2;
+num2 = (int) num3;
+
+int result = num1 - num2;
+System.out.println(result);
+
+0
+```
+
+### 2.3.3 연산식에서의 자동 타입 변환
+
+        크기에 따라 자동및 강제 형변환 된다는 걸 이해하자
+        정수는 int 연산 된다는 이해 하자 
+
+ ```java
+byte byteValue1 = 10;
+byte byteValue2 = 20;
+//byte byteValue3 = byteValue1 + byteValue2;   //에러 
+int intValue1 = byteValue1 + byteValue2;
+System.out.println(intValue1);
+
+char charValue1 = 'A';
+char charValue2 = 1;
+//char charValue3 = charValue1 + charValue2;   //에러 
+int intValue2 = charValue1 + charValue2;
+System.out.println("유니코드=" + intValue2);
+System.out.println("출력문자=" + (char)intValue2);
+
+int intValue3 = 10;
+int intValue4 = intValue3/4;
+System.out.println(intValue4);
+
+int intValue5 = 10;
+//int intValue6 = 10 / 4.0;   //에러 
+double doubleValue = intValue5 / 4.0;
+System.out.println(doubleValue);
+   
+30
+유니코드=66
+출력문자=B
+2
+2.5
+
+
+```
+
+ 	

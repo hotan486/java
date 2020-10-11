@@ -1,4 +1,4 @@
-package sec03.exam02_casting;
+package capter02.sec03.exam02_casting;
 public class CastingExample {
 	public static void main(String[] args) {	
 		int intValue = 44032;
