@@ -1,16 +1,16 @@
-package sec02.exam02_char;
+package capter02.sec02.exam02_char;
 
 public class CharExample {
 	public static void main(String[] args) {
-		char c1 = 'A';          	//¹®ÀÚ¸¦ Á÷Á¢ ÀúÀå
-		char c2 = 65;          	//½ÊÁø¼ö·Î ÀúÀå
-		char c3 = '\u0041';    //16Áø¼ö·Î ÀúÀå
+		char c1 = 'A';          	//ë¬¸ìë¥¼ ì§ì ‘ ì €ì¥
+		char c2 = 65;          	//ì‹­ì§„ìˆ˜ë¡œ ì €ì¥
+		char c3 = '\u0041';    //16ì§„ìˆ˜ë¡œ ì €ì¥
 		
-		char c4 = '°¡';         	//¹®ÀÚ¸¦ Á÷Á¢ ÀúÀå
-		char c5 = 44032;      	//½ÊÁø¼ö·Î ÀúÀå
-		char c6 = '\uac00';    //16Áø¼ö·Î ÀúÀå
+		char c4 = 'ê°€';         	//ë¬¸ìë¥¼ ì§ì ‘ ì €ì¥
+		char c5 = 44032;      	//ì‹­ì§„ìˆ˜ë¡œ ì €ì¥
+		char c6 = '\uac00';    //16ì§„ìˆ˜ë¡œ ì €ì¥
 		
-		int uniCode = c1;		//À¯´ÏÄÚµå ¾ò±â
+		int uniCode = c1;		//ìœ ë‹ˆì½”ë“œ ì–»ê¸°
 		
 		System.out.println(c1);
 		System.out.println(c2);

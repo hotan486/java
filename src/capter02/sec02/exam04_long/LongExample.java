@@ -1,9 +1,9 @@
-package sec02.exam04_long;
+package capter02.sec02.exam04_long;
 public class LongExample {
 	public static void main(String[] args) {
 		long var1 = 10;		
 		long var2 = 20L;		
-		//long var3 = 1000000000000;     //ÄÄÆÄÀÏ ¿¡·¯
+		//long var3 = 1000000000000;     //ì»´íŒŒì¼ ì—ëŸ¬
 		long var4 = 1000000000000L;
 		
 		System.out.println(var1);

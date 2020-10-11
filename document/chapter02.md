@@ -159,3 +159,74 @@
 
 - char 타입
 
+        유니코드 0 ~ 65535 2byte
+        이중 0 ~127 아스키코드 
+        44032 ~ 55203 한글 11172자가 할당
+
+http://www.unicode.org
+
+```java
+
+    char c1 = 'A';          	//문자를 직접 저장
+    char c2 = 65;          	//십진수로 저장
+    char c3 = '\u0041';    //16진수로 저장
+    
+    char c4 = '가';         	//문자를 직접 저장
+    char c5 = 44032;      	//십진수로 저장
+    char c6 = '\uac00';    //16진수로 저장
+    
+    int uniCode = c1;		//유니코드 얻기
+    
+    System.out.println(c1);
+    System.out.println(c2);
+    System.out.println(c3);
+    System.out.println(c4);
+    System.out.println(c5);
+    System.out.println(c6);
+    System.out.println(uniCode);
+
+    A
+    A
+    A
+    가
+    가
+    가
+    65
+
+```
+
+- int 타입
+  
+        정수 연산의 기초인 int로 연산을 한다. 
+
+
+```java
+	    int var1 = 10;		//10진수로 저장
+		int var2 = 012;		//8진수로 저장
+		int var3 = 0xA;		//16진수로 저장
+		
+		System.out.println(var1);
+		System.out.println(var2);
+        System.out.println(var3);
+
+        10
+        10
+        10
+```
+
+- long 타입 
+
+```java
+		long var1 = 10;		
+		long var2 = 20L;		
+		//long var3 = 1000000000000;     //컴파일 에러
+		long var4 = 1000000000000L; // L
+		
+		System.out.println(var1);
+		System.out.println(var2);
+		System.out.println(var4);
+
+      10
+        20
+        1000000000000
+```
