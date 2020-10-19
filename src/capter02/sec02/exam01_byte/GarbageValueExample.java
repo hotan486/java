@@ -7,7 +7,7 @@ public class GarbageValueExample {
 			var1++;
 			var2++;
 			System.out.println("var1: " + var1 + "\t" + "var2: " + var2);
-			
+			//byte  -128 ~ 127 -128  
 		}
 	}
 }

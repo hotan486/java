@@ -5,10 +5,10 @@ public class PromotionExample {
 		int intValue = byteValue; 
 		System.out.println(intValue);
 
-		char charValue = '가';
+		char charValue = '나';
 		intValue = charValue;
 		System.out.println("가의 유니코드=" + intValue);
-		
+		//45208
 		intValue = 500;
 		long longValue = intValue;;
 		System.out.println(longValue);		

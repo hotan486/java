@@ -19,7 +19,7 @@ public class FloatDoubleExample {
 		int var6 = 3000000;
 		double var7 = 3e6;
 		float var8 = 3e6F;
-		double var9 = 2e-3;
+		double var9 = 2e-3; //0.002  2/1000
 		System.out.println("var6: " + var6);
 		System.out.println("var7: " + var7);
 		System.out.println("var8: " + var8);

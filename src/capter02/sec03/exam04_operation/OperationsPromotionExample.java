@@ -5,6 +5,13 @@ public class OperationsPromotionExample {
 		byte byteValue2 = 20;
 		//byte byteValue3 = byteValue1 + byteValue2;   //에러 
 		int intValue1 = byteValue1 + byteValue2;
+		
+		long sd = 1234567890L;
+		long qw = 1234567890L;
+		long asd = sd + qw;
+		System.out.println(asd);
+		
+		
 		System.out.println(intValue1);
 		
 		char charValue1 = 'A';

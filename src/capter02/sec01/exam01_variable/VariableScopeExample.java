@@ -26,6 +26,7 @@ public class VariableScopeExample {
 		}
 		
 		var1 = 10;
+		var2= 10;
 		//var3 = 30; //사용불가 
 		
 		

@@ -5,7 +5,7 @@ public class ByteExample {
 		byte var2 = -30;
 		byte var3 = 0;
 		byte var4 = 30;
-		byte var5 = 127;
+		byte var5 = 127; // 127 + 1 =  -128  + 1 = -127
 		//byte var6 = 128; //������ ����
 		
 		
