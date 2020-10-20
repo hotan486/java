@@ -1,4 +1,4 @@
-package sec03.exam03_deny_logic;
+package cpater03.sec03.exam03_deny_logic;
 
 public class DenyLogicOperatorExample {
 	public static void main(String[] args) {

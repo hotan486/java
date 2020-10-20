@@ -1,4 +1,4 @@
-package sec03.exam02_increase_decrease;
+package cpater03.sec03.exam02_increase_decrease;
 
 public class IncreaseDecreaseOperatorExample {
 	public static void main(String[] args) {
