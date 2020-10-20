@@ -7,7 +7,8 @@
 [3.2 연산의 방향과 우선순위](#연산의-방향과-우선순위) 
  
 [3.3 단항 연산자](#단항-연산자) 
-
+- [3.3.1 부호연산자(+,-)](#부호연산자(+,-)) 
+- [3.3.2 증감 연산자(++,--)](#증감-연산자(++,--)) 
 ## 연산자와 연산식
 
 - 연산(operations) : 데이터를 처리하여 결과를 산출하는것 
@@ -56,6 +57,48 @@
 
 ## 단항 연산자
 
-피연산자가 하나인 연산자를 말한다.
+ - 피연산자가 하나인 연산자를 말한다.
 
 ### 부호연산자(+,-)
+
+- 양수나 음수를 표시하며, boolean char 타입을 제외한 나머지 타입에 사용한다.
+
+        int num = +100;
+        int num2 = -300;
+
+- 위와 같이 정수나 실수 리터럴에 붙혀 표현한다 또 변수 앞에 붙힐수 있다.
+
+        int num = - 100;
+        int result = -num;
+
+- 위와 같이 result에 값은 -(-100)이므로 +100이 된다.
+
+        short s = 100;
+        //short result = -s; (에러)
+        int result = -s; (정상)
+
+- long 제외 정수 산출시 값이 int가 되므로 주위 해야 한다.
+
+
+```java
+
+int x = -100;
+int result1 = +x; //+(-100)
+int result2 = -x;
+System.out.println("result1=" + result1);
+System.out.println("result2=" + result2);
+
+short s = 100;
+//short result3 = -s; //강제 형변환 필요
+int result3 = -s; 
+System.out.println("result3=" + result3);
+
+result1=-100
+result2=100
+result3=-100
+
+```
+
+- 연산시 정수는 int가 되어 버리므로 int로 받던지 강제 형변환해야 한다.
+
+### 증감 연산자(++,--)
