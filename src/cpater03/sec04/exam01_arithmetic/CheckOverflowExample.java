@@ -11,6 +11,15 @@ public class CheckOverflowExample {
 	}
 	
 	public static int safeAdd(int left, int right)  {
+		System.out.println("left:" +left);
+		System.out.println("right:" +right);
+		System.out.println("left:" +Integer.MAX_VALUE);
+		System.out.println("left:" +Integer.MIN_VALUE);
+		
+		System.out.println("left:" +(Integer.MAX_VALUE - right));
+		System.out.println("left:" +(Integer.MIN_VALUE-right));
+		
+		
 		if((right>0)) { 
 			if(left>(Integer.MAX_VALUE - right)) {
 				throw new ArithmeticException("오버플로우 발생");

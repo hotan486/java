@@ -333,11 +333,6 @@ System.out.println(z);
 1000000000000
 ```
 
-
-
-
-
-
 ```java
 
 public static void main(String[] args) {
@@ -349,8 +344,15 @@ public static void main(String[] args) {
         }
 }
 
+//6 + 6
+//max 10 
+//10 - 6 = 4
+// 6 6
+//-10 -6  10 9 8 7 6 5 > 6
+                
 public static int safeAdd(int left, int right)  {
         if((right>0)) { 
+                //맥스값에서 right를 뺴면 right에 더할수있는최대치가 나오는데 그 값보다 크면 오류
                 if(left>(Integer.MAX_VALUE - right)) {
                         throw new ArithmeticException("오버플로우 발생");
                 }
@@ -363,6 +365,13 @@ public static int safeAdd(int left, int right)  {
 }
         
 ```
+
+- 최대치가 넘어 갈것을 대비해서 예외처리를 해야 한다.
+
+#### 정확한 계산은 정수 사용
+
+- 정확한 계산은 실수타입을 사용하지 않는 것이 좋다.
+
 ```java
 
 ```
