@@ -1,4 +1,4 @@
-package sec04.exam01_arithmetic;
+package cpater03.sec04.exam01_arithmetic;
 public class ArithmeticOperatorExample {
 	public static void main(String[] args) {
 		int v1 = 5;

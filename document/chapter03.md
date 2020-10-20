@@ -235,20 +235,133 @@ public static String toBinaryString(int value) {
 
 ### 3.4.1 산술 연산자(+,-,*,/,%)
 
+- boolean 제외
 
+- 나머지 연산자 %
+        
+        int result = num % 3;
+
+- 나머지 연산자를 사용하면 정수 리터럴에 따라 0,1,2 하나가 result이 된다.
+
+- 정리 
+  
+1. 정수 피연산자가 int보다 작을 경우, int로 산출된다.
+2. 정수 피연산자가 long이 있을 경우, long타입으로 산출된다.
+3. 실수의 경우, 크기가 큰 타입에 따라 산출 된다.
+
+        int int1 = 10;
+        int int2 = 2;
+
+        int result1 = int1 + int2; //2
+        double result2 = int1 + int2; //2.0
+        
+        double result3 = (1.0*int1) + int2; //2.5
+        double result4 = (double)int1 + int2;  //2.5
+        double result5 = int1 + (double)int2;  //2.5
+
+- 실수의 정확한 출력을 위해서는 하나이상의 변수가 실수여야한다. (강제 형변환 포함)
 
 
 ```java
+int v1 = 5;
+int v2 = 2;
+
+int result1 = v1 + v2;
+System.out.println("result1=" + result1);
+
+int result2 = v1 - v2;
+System.out.println("result2=" + result2);
+
+int result3 = v1 * v2;
+System.out.println("result3=" + result3);
+
+int result4 = v1 / v2;
+System.out.println("result4=" + result4);
+
+int result5 = v1 % v2;
+System.out.println("result5=" + result5);
+
+double result6 = (double) v1 / v2;
+System.out.println("result6=" + result6);	
+
+result1=7
+result2=3
+result3=10
+result4=2
+result5=1
+result6=2.5
 
 ```
 ```java
-
+char c1 = 'A' + 1;
+char c2 = 'A';
+//char c3 = c2 + 1;   
+System.out.println("c1: " + c1);
+System.out.println("c2: " + c2);
+//System.out.println("c3: " + c3);
+                
+c1: B
+c2: A
 ```
+
+- c1은 리터럴간 연산이다 정상적으로 가능하다
+- c3의 경우는 다르다 char 타입인 피연산자이므로 연산시 int로 형 변환된다.
+- 그러므로 char로 강제 형변환하던지 타입을 int로 변경해야 한다.
+
+        char c3 = (char)c2 + 1;  
+        int c3 = c2 + 1;  
+
+#### 오버플로우 탐지
+
+- 산출 값이 타입의 최대치를 넘으면 안된다. 쓰레기값 발생 
+
 ```java
 
+//int 의 최대값을 넘었다
+int x1 = 1000000;
+int y1 = 1000000;
+int z1 = x1 * y1;
+System.out.println(z1);
+
+//해결
+long x = 1000000;
+long y = 1000000;
+long z = x * y;
+System.out.println(z);
+
+-727379968
+1000000000000
 ```
+
+
+
+
+
+
 ```java
 
+public static void main(String[] args) {
+        try {
+                int result = safeAdd(2000000000, 2000000000);
+                System.out.println(result);
+        } catch(ArithmeticException e) {
+                System.out.println("오버플로우가 발생하여 정확하게 계산할 수 없음");
+        }
+}
+
+public static int safeAdd(int left, int right)  {
+        if((right>0)) { 
+                if(left>(Integer.MAX_VALUE - right)) {
+                        throw new ArithmeticException("오버플로우 발생");
+                }
+        } else {
+                if(left<(Integer.MIN_VALUE - right)) {
+                        throw new ArithmeticException("오버플로우 발생");
+                }
+        }
+        return left + right;
+}
+        
 ```
 ```java
 

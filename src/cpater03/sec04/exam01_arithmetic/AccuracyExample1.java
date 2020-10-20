@@ -1,4 +1,4 @@
-package sec04.exam01_arithmetic;
+package cpater03.sec04.exam01_arithmetic;
 
 public class AccuracyExample1 {
 	public static void main(String[] args) {
@@ -6,11 +6,11 @@ public class AccuracyExample1 {
 		double pieceUnit = 0.1;
 		int number = 7;
 		
-		double result = apple - number*pieceUnit;
+		double result = apple - number*pieceUnit; // 1- 0.1*7
 		
-		System.out.println("»ç°ú ÇÑ°³¿¡¼­ ");
-		System.out.println("0.7 Á¶°¢À» »©¸é, ");
-		System.out.println(result + " Á¶°¢ÀÌ ³²´Â´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ï¿½ï¿½ï¿½ï¿½ ");
+		System.out.println("0.7 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ");
+		System.out.println(result + " ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.");
 	}
 }
 
