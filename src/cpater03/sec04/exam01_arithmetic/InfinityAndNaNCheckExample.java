@@ -1,37 +1,37 @@
-package sec04.exam01_arithmetic;
+package cpater03.sec04.exam01_arithmetic;
 public class InfinityAndNaNCheckExample {
 	public static void main(String[] args) {
-		int x = 5;
+		/*int x = 5;
 		double y = 0.0;
-		
+
 		double z = x / y;
 		//double z = x % y;
-		
+
 		System.out.println(Double.isInfinite(z));
 		System.out.println(Double.isNaN(z));	
-		
-		//Àß¸øµÈ ÄÚµå
+
+		//ì˜ëª»ëœ ì½”ë“œ
 		System.out.println(z + 2);	
-		
-		//¾Ë¸ÂÀº ÄÚµå
+
+		//ì•Œë§ì€ ì½”ë“œ
 		if(Double.isInfinite(z) || Double.isNaN(z)) { 
-			System.out.println("°ª »êÃâ ºÒ°¡"); 
+		        System.out.println("ê°’ ì‚°ì¶œ ë¶ˆê°€"); 
 		} else { 
-			System.out.println(z + 2); 
+		        System.out.println(z + 2); 
 		}
-		
+		*/
 		//---------------------------------------------------
-		
-		/*int x = 5;
+
+		int x = 5;
 		int y = 0;
-		
+
 		try {
-			//int z = x / y;
-			int z = x % y;
-			System.out.println("z: " + z);
+		        int z = x / y;
+		        //int z = x % y;
+		        System.out.println("z: " + z);
 		} catch(ArithmeticException e) {
-			System.out.println("0À¸·Î ³ª´©¸é ¾ÈµÊ");
-		}*/
+		        System.out.println("0ìœ¼ë¡œ ë‚˜ëˆ„ë©´ ì•ˆë¨");
+		}
 	}
 }
 

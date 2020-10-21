@@ -8,9 +8,9 @@ public class AccuracyExample1 {
 		
 		double result = apple - number*pieceUnit; // 1- 0.1*7
 		
-		System.out.println("��� �Ѱ����� ");
-		System.out.println("0.7 ������ ����, ");
-		System.out.println(result + " ������ ���´�.");
+		System.out.println("사과 한개에서 ");
+		System.out.println("0.7 조각을 빼면, ");
+		System.out.println(result + " 조각이 남는다.");
 	}
 }
 

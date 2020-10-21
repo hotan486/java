@@ -373,6 +373,145 @@ public static int safeAdd(int left, int right)  {
 - 정확한 계산은 실수타입을 사용하지 않는 것이 좋다.
 
 ```java
+int apple = 1;
+double pieceUnit = 0.1;
+int number = 7;
+
+double result = apple - number*pieceUnit; // 1- 0.1*7
+
+System.out.println("사과 한개에서 ");
+System.out.println("0.7 조각을 빼면, ");
+System.out.println(result + " 조각이 남는다.");
+
+사과 한개에서 
+0.7 조각을 빼면, 
+0.29999999999999993 조각이 남는다.
+
+```
+- 실수는 정확한 표현이 어렵고 근사치로 표현하기 떄문에 
+- 정수로 변경해서 표현해야 한다.
+
+```java
+int apple = 1;
+
+int totalPieces = apple * 10;
+int number = 7;
+int temp = totalPieces - number;
+
+double result = temp/10.0; 
+
+System.out.println("사과 한개에서 ");
+System.out.println("0.7 조각을 빼면, ");
+System.out.println(result + " 조각이 남는다.");
+
+사과 한개에서 
+0.7 조각을 빼면, 
+0.3 조각이 남는다.
+```
+
+- 모든 연산을 정수 연산으로 하고 결과부분만 실수로 처리한다.
+
+#### NaN과 Infinity 연산
+
+- / % 를 사용할 경우에도 주의 해야한다.
+- 우측에 0이 오면 실행시 에외가 발생한다.
+- 즉, 5/0은 무한대(Infinity)값이며
+- 5%0은 NaN (Not a Number)
+- Double.isInfinite() -> Infinity일 경우 true
+- Double.isNaN() -> NaN일 경우 true
+
+
+
+
+
+```java
+int x = 5;
+double y = 0.0;
+
+double z = x / y;
+//double z = x % y;
+
+System.out.println(Double.isInfinite(z));
+System.out.println(Double.isNaN(z));	
+
+//잘못된 코드
+System.out.println(z + 2);	
+
+//알맞은 코드
+if(Double.isInfinite(z) || Double.isNaN(z)) { 
+        System.out.println("값 산출 불가"); 
+} else { 
+        System.out.println(z + 2); 
+}
+
+//---------------------------------------------------
+
+/*int x = 5;
+int y = 0;
+
+try {
+        //int z = x / y;
+        int z = x % y;
+        System.out.println("z: " + z);
+} catch(ArithmeticException e) {
+        System.out.println("0으로 나누면 안됨");
+}*/
+
+true
+false
+Infinity
+값 산출 불가
+
+0으로 나누면 안됨
+```
+
+-  ArithmeticException 예외처리로 Infinity이거나 NaN일 경우 예외를 반환한다.
+
+
+#### 입력값의 NaN 검사
+
+- 실수를 입력받을 때는 받드시 NaN 검사를 해야 한다.
+- "NaN"를 입력 할수 있다.
+
+
+```java
+String userInput = "NaN";
+double val = Double.valueOf( userInput );
+System.out.println(val);
+double currentBalance = 10000.0;
+System.out.println(currentBalance);
+currentBalance += val;
+System.out.println(currentBalance);
+
+NaN
+10000.0
+NaN
+
+```
+
+
+```java
+
+```
+```java
+
+```
+```java
+
+```
+```java
+
+```
+```java
+
+```
+```java
+
+```
+```java
+
+```
+```java
 
 ```
 ```java

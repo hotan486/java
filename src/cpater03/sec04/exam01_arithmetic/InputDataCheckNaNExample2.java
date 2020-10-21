@@ -1,4 +1,4 @@
-package sec04.exam01_arithmetic;
+package cpater03.sec04.exam01_arithmetic;
 
 public class InputDataCheckNaNExample2 {
 	public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class InputDataCheckNaNExample2 {
 		double currentBalance = 10000.0;
 		
 		if(Double.isNaN(val)) {
-			System.out.println("NaNÀÌ ÀÔ·ÂµÇ¾î Ã³¸®ÇÒ ¼ö ¾øÀ½");
+			System.out.println("NaNï¿½ï¿½ ï¿½Ô·ÂµÇ¾ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			val = 0.0;
 		} 
 		
