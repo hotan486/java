@@ -1,4 +1,4 @@
-package sec04.exam02_string_concat;
+package cpater03.sec04.exam02_string_concat;
 
 public class StringConcatExample {
 	public static void main(String[] args) {

@@ -489,13 +489,54 @@ NaN
 
 ```
 
+- 그러므로 문자열 입력시에 NaN를 확인해서 예외처리해야 한다.
 
 ```java
+String userInput = "NaN";
+double val = Double.valueOf(userInput);
+
+double currentBalance = 10000.0;
+
+if(Double.isNaN(val)) {
+        System.out.println("NaN이 입력되어 처리할 수 없음 ");
+        val = 0.0;
+} 
+
+currentBalance += val;
+System.out.println(currentBalance);
+
+NaN이 입력되어 처리할 수 없음 
+10000.0
 
 ```
+
+### 3.4.2 문자열 연결 연산자(+)
+
+- + 연산자는 산술 연산자, 부호 연산자인 동시에 문자열 연결 연산자이다.
+        
+        //숫자 문자열 혼합의 경우 왼쪽에서 오른쪽으로 연산된다. 
+        "JDK" + 3 + 3.0; // 문자열처럼 다 더해진다. JDK33.0 
+        3+3.0+"JDK"; // 숫자가 연산된후 더해진다. 6.0JDK
+
 ```java
+String str1 = "JDK" + 6.0;
+String str2 = str1 + " Ư¡";
+System.out.println(str2);
 
+String str3 = "JDK" + 3 + 3.0;
+String str4 = 3 + 3.0 + "JDK";
+System.out.println(str3);
+System.out.println(str4);	
+
+JDK6.0 Ư¡
+JDK33.0
+6.0JDK
 ```
+
+### 3.4.3 비교 연산자(<,<=,>,>=,==,!=)
+
+
+
 ```java
 
 ```
