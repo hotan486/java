@@ -1,4 +1,4 @@
-package sec04.exam03_compare;
+package cpater03.sec04.exam03_compare;
 
 public class CompareOperatorExample1 {
 	public static void main(String[] args) {

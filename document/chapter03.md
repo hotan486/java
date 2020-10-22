@@ -535,31 +535,237 @@ JDK33.0
 
 ### 3.4.3 비교 연산자(<,<=,>,>=,==,!=)
 
+- boolean 제외
+- 비교 연산자는 조건문이나 반복문에서 흐름 제어할 경우 사용
+
+```java
+
+int num1 = 10;
+int num2 = 10;
+boolean result1 = (num1 == num2); 
+boolean result2 = (num1 != num2); 
+boolean result3 = (num1 <= num2);
+System.out.println("result1=" + result1);
+System.out.println("result2=" + result2);
+System.out.println("result3=" + result3);
+
+char char1 = 'A'; //65
+char char2 = 'B'; //66 
+boolean result4 = (char1 < char2);
+System.out.println("result4=" + result4);	
+
+result1=true
+result2=false
+result3=true
+result4=true                
+```
+
+
+
 
 
 ```java
+int v2 = 1;
+double v3 = 1.0;
+System.out.println(v2 == v3); //true
+
+double v4 = 0.1;
+float v5 = 0.1f;
+System.out.println(v4 == v5); //false
+System.out.println((float)v4 == v5); //true
+System.out.println((int)(v4*10) == (int)(v5*10)); //true
+
+true
+false
+true
+true
 
 ```
+
+- 문자열의 경우 동등 비교 연산자만 사용 가능 하다.
+
 ```java
+String strVar1 = "신민철";
+String strVar2 = "신민철";
+String strVar3 = new String("신민철"); // 동적인 객체생성으로 빈지가 다르다
+
+//문자랑 번지까지 비교
+System.out.println( strVar1 == strVar2);
+System.out.println( strVar1 == strVar3);
+System.out.println();
+// 문자만 비교 
+System.out.println( strVar1.equals(strVar2));
+System.out.println( strVar1.equals(strVar3));
+
+true
+false
+
+true
+true
+```
+
+### 3.4.4 논리 연산자(&&,||,&,|^,!)
+
+- && & 모두 참일 경우만 참
+- || | 하나만 참이여도 참
+- ^ 하나는 참 하나는 거짓일 경우 참
+- ! 논리값을 바꿈
+
+
+```java
+
+int charCode = 'A';		
+
+if( (charCode>=65) & (charCode<=90) ) {
+        System.out.println("대문자 이군요");
+}
+
+if( (charCode>=97) && (charCode<=122) ) {
+        System.out.println("소문자 이군요");
+}
+
+if( !(charCode<48) && !(charCode>57) ) {
+        System.out.println("0~9 숫자 이군요");
+}
+
+int value = 6;
+
+if( (value%2==0) | (value%3==0) ) {
+        System.out.println("2 또는 3의 배수 이군요");
+}
+
+if( (value%2==0) || (value%3==0) ) {
+        System.out.println("2 또는 3의 배수 이군요");
+}	
+  
+대문자 이군요
+2 또는 3의 배수 이군요
+2 또는 3의 배수 이군요
 
 ```
+
+### 3.4.5 비트 연산자(&,|,^,~,<<,>>,>>>)
+
+- 비트 연산자는 비트 단위로 연산한다.
+- 0,1,이 피연산자가 된다.
+- 정수타입만 비트 연산이 가능하다.
+
+#### 비트 논리 연산자(&,|,^)
+
+
+
+
+
 ```java
+public static void main(String[] args) {
+        System.out.println("45 & 25 = " + (45 & 25));		
+        System.out.println("45 | 25 = " + (45 | 25));	
+        System.out.println("45 ^ 25 = " + (45 ^ 25));	
+        System.out.println("~45 = " + (~45));
+        
+        System.out.println(toBinaryString(45));
+        System.out.println("&");
+        System.out.println(toBinaryString(25));
+        System.out.println("||");
+        System.out.println(toBinaryString(45&25));
+        System.out.println(toBinaryString(45|25));
+	System.out.println(toBinaryString(45^25));
+}
+
+public static String toBinaryString(int value) {
+        String str = Integer.toBinaryString(value);
+        while(str.length() < 32) {
+                str = "0" + str;
+        }
+        return str;
+}
+
+45 & 25 = 9
+45 | 25 = 61
+45 ^ 25 = 52
+~45 = -46
+00000000000000000000000000101101
+&
+00000000000000000000000000011001
+||
+00000000000000000000000000001001
+00000000000000000000000000111101
+00000000000000000000000000110100
 
 ```
+
+#### 비트 이동 연산자(<<,>>,>>>)
+
+
+
 ```java
+public static void main(String[] args) {
+        System.out.println("1 << 3 = " + (1<<3));		
+        System.out.println("-8 >> 3 = " + (-8>>3));	
+        System.out.println("-8 >>> 3 = " + (-8>>>3));
+        
+        System.out.println(toBinaryString(1));
+        System.out.println(toBinaryString(3));
+        System.out.println(toBinaryString(-8));
+        System.out.println("<< 3");
+        System.out.println(toBinaryString(1<<3));
+        System.out.println(toBinaryString(-8<<3));
+        System.out.println(toBinaryString(-8>>>3));
+}
+
+public static String toBinaryString(int value) {
+        String str = Integer.toBinaryString(value);
+        while(str.length() < 32) {
+                str = "0" + str;
+        }
+        return str;
+}
+1 << 3 = 8
+-8 >> 3 = -1
+-8 >>> 3 = 536870911
+00000000000000000000000000000001
+00000000000000000000000000000011
+11111111111111111111111111111000
+<< 3
+00000000000000000000000000001000
+11111111111111111111111111000000
+00011111111111111111111111111111
+```
+
+### 3.4.6 대입 연산자 () 
+
+- 대입 연산자는 가장 낮은 연산 순위를 가지고 있어 제일 마지막에 수행된다.
+
+```java
+int result = 0;		
+result += 10;
+System.out.println("result=" + result);		
+result -= 5;
+System.out.println("result=" + result);		
+result *= 3;
+System.out.println("result=" + result);		
+result /= 5;
+System.out.println("result=" + result);		
+result %= 3;
+System.out.println("result=" + result);	       
+
+result=10
+result=5
+result=15
+result=3
+result=0
 
 ```
+## 3.5 삼항 연산자 
+
 ```java
 
-```
-```java
+int score = 85;
+char grade = (score > 90) ? 'A' : ( (score > 80) ? 'B' : 'C' );
+System.out.println(score + "점은 " + grade + "등급입니다.");
 
-```
-```java
-
-```
-```java
-
+85점은 B등급입니다.
+                
 ```
 ```java
 

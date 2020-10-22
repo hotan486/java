@@ -1,4 +1,4 @@
-package sec04.exam06_assignment;
+package cpater03.sec04.exam06_assignment;
 
 public class AssignmentOperatorExample {
 	public static void main(String[] args) {
