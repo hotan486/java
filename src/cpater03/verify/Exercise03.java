@@ -1,8 +1,8 @@
-package verify;
+package cpater03.verify;
 public class Exercise03 {
 	public static void main(String[] args) {
 		int score = 85;
-		String result = (!(score>90))? "°¡":"³ª";
+		String result = (!(score>90))? "ï¿½ï¿½":"ï¿½ï¿½";
 		System.out.println(result);
 	}
 }

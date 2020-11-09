@@ -1,14 +1,14 @@
-package verify;
+package cpater03.verify;
 public class Exercise04 {
 	public static void main(String[] args) {
 		int pencils = 534;
 		int students = 30;
 		
-		//ÇÐ»ý ÇÑ ¸íÀÌ °¡Áö´Â ¿¬ÇÊ ¼ö
+		//ï¿½Ð»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 		int pencilsPerStudent = ( pencils / students ); 
 		System.out.println(pencilsPerStudent);
 		
-		//³²Àº ¿¬ÇÊ ¼ö
+		//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 		int pencilsLeft = ( pencils % students );
 		System.out.println(pencilsLeft);
 	}

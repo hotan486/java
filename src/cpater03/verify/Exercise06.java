@@ -1,4 +1,4 @@
-package verify;
+package cpater03.verify;
 public class Exercise06 {
 	public static void main(String[] args) {
 		int lengthTop = 5;

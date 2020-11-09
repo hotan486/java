@@ -1,4 +1,4 @@
-package verify;
+package cpater03.verify;
 public class Exercise08 {
 	public static void main(String[] args) {
 	  double x = 5.0;
@@ -7,10 +7,10 @@ public class Exercise08 {
 		double z = 5 % y;
 		
 		if( Double.isNaN(z) ) {
-			System.out.println("0.0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("0.0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		} else {
 			double result = z + 10;
-			System.out.println("°á°ú: " + result);
+			System.out.println("ï¿½ï¿½ï¿½: " + result);
 		}
 	}
 }
