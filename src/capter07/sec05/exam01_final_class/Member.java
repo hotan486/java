@@ -1,4 +1,7 @@
-package sec05.exam01_final_class;
+package capter07.sec05.exam01_final_class;
 
-public final class Member {
+public final class Member extends VeryVeryImportantPerson{
+	 
+	
+	
 }

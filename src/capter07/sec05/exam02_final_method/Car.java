@@ -1,18 +1,19 @@
-package sec05.exam02_final_method;
+package capter07.sec05.exam02_final_method;
 
 public class Car {
-	//ÇÊµå
+	//í•„ë“œ
 	public int speed;
 	
-	//¸Þ¼Òµå
+	//ë©”ì†Œë“œ
 	public void speedUp() {
 		speed += 1;
 	}		
 	
-	//final ¸Þ¼Òµå
+	//final ë©”ì†Œë“œ
 	public final void stop() {
-		System.out.println("Â÷¸¦ ¸ØÃã");
+		System.out.println("ì°¨ë¥¼ ë©ˆì¶¤");
 		speed = 0;
 	}
 }
+
 

@@ -1,4 +1,4 @@
-package sec05.exam02_final_method;
+package capter07.sec05.exam02_final_method;
 
 public class SportsCar extends Car {
 	@Override
@@ -6,13 +6,12 @@ public class SportsCar extends Car {
 		speed += 10;
 	}
 	
-	//¿À¹ö¶óÀÌµùÀ» ÇÒ ¼ö ¾øÀ½
+	//ì˜¤ë²„ë¼ì´ë”©ì„ í•  ìˆ˜ ì—†ìŒ
 	/*
 	@Override
 	public void stop() {
-		System.out.println("½ºÆ÷Ã÷Ä«¸¦ ¸ØÃã");
+		System.out.println("ìŠ¤í¬ì¸ ì¹´ë¥¼ ë©ˆì¶¤");
 		speed = 0;
 	}
 	*/
 }
-
